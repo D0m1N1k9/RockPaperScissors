@@ -1,0 +1,20 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.choices{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.choices i{
+    transition: 200ms all;
+}
+
+.choices i:hover{
+    color: #86005f;
+    cursor: pointer;
+    transform: scale(1.1);
+}

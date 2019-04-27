@@ -5,14 +5,19 @@
  * Date: 25.03.2019
  * Time: 11:46
  */
-
+/**
+ * @Entity @Table(name="statistic")
+ **/
 class Statistic
 {
     /** @Id @Column(type="integer") @GeneratedValue **/
     protected $id;
-    /** @Column(type="boolean") **/
-    protected $winOrlose;
-    /** @Column(type="datetime") **/
+    /** @Column(type="string") **/
+    protected $winner;
+    /**
+     *@Column(type="datetime")
+     *@var \DateTime
+     **/
     protected $date;
 
     public function getId()
@@ -20,14 +25,14 @@ class Statistic
         return $this->id;
     }
 
-    public function getWinOrlose()
+    public function getWinner()
     {
-        return $this->winOrlose;
+        return $this->winner;
     }
 
-    public function setWinOrlose($winOrlose)
+    public function setWinner($winner)
     {
-        $this->winOrlose = $winOrlose;
+        $this->winner = $winner;
     }
 
     public function getDate()

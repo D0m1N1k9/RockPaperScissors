@@ -13,5 +13,6 @@ require "vendor/autoload.php";
 
 $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), true);
 try{
-    $entityManager = EntityManager::create($connectionParams, $config);
+    $entityManager = EntityManager::create(config::getConnectionParams(), $config);
 } catch (Exception $e) {}
+

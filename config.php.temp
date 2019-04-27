@@ -6,10 +6,14 @@
  * Time: 11:50
  */
 
-$connectionParams = array(
-    'dbname' => 'XXX',
-    'user' => 'XXX',
-    'password' => 'XXX',
-    'host' => 'XXXhost',
-    'driver' => 'XXX',
-);
+class config{
+    public static function getConnectionParams(){
+        return array(
+            'dbname' => 'XXX',
+            'user' => 'XXX',
+            'password' => 'XXX',
+            'host' => 'XXXhost',
+            'driver' => 'XXX',
+        );
+    }
+}

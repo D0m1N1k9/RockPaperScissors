@@ -8,7 +8,7 @@
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-require_once "../config.php";
+require_once "config.php";
 require_once "../vendor/autoload.php";
 require_once "../src/statistic.php";
 
@@ -21,9 +21,7 @@ class createEntityManager {
     public function __construct()
     {
         $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), true);
-        try{
-            $this->entityManager = EntityManager::create(config::getConnectionParams(), $config);
-        } catch (Exception $e) {}
+        $this->entityManager = EntityManager::create(config::getConnectionParams(), $config);
     }
 
     /**

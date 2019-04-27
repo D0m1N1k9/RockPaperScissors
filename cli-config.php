@@ -2,11 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: Dominik
- * Date: 18.03.2019
- * Time: 13:19
+ * Date: 27.04.2019
+ * Time: 15:02
  */
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
 
-require_once "database.php";
+// replace with file to your own project bootstrap
+require_once 'database.php';
 
-return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
-
+return ConsoleRunner::createHelperSet($entityManager);

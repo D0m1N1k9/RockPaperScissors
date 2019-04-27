@@ -8,14 +8,19 @@
 
 require_once "newStatistic.php";
 
+/*
+ * Rock = 1
+ * Paper = 2
+ * Scissors = 3
+ */
+
 $playerChoice = '';
 
 if (isset($_GET['choice'])){
     $playerChoice = $_GET['choice'];
 }
 
-//header('Content-type: application/json');
-
+header('Content-type: application/json');
 $winner = getWinner($playerChoice);
 echo json_encode($winner);
 (new createEntityManager) -> saveNewStatistic($winner);

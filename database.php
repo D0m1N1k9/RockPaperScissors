@@ -2,17 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: Dominik
- * Date: 18.03.2019
- * Time: 13:02
+ * Date: 27.04.2019
+ * Time: 15:11
  */
+
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-require_once "config.php";
-require "vendor/autoload.php";
+require_once "../vendor/autoload.php";
+require_once "backend/config.php";
 
-$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), true);
-try{
-    $entityManager = EntityManager::create(config::getConnectionParams(), $config);
-} catch (Exception $e) {}
-
+$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/src"), true);
+$entityManager = EntityManager::create(config::getConnectionParams(), $config);

@@ -13,7 +13,8 @@ body{
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    background-color: rgba(117, 0, 77, 0.34);
+    background-color: rgb(10, 26, 128);
+    color: white;
     font-size: 3rem;
 }
 
@@ -35,10 +36,22 @@ body{
     transition: 200ms all;
 }
 
-.choices i:hover{
-    color: #86005f;
+.choices i:hover:first-child{
+    color: rgba(10, 26, 128, 0.54);
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.15);
+}
+
+.choices i:hover:nth-child(2){
+    color: rgba(10, 26, 128, 0.54);
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.choices i:hover:last-child{
+    color: rgba(10, 26, 128, 0.54);
+    cursor: pointer;
+    transform: translateX(-1rem);
 }
 
 #winner{

@@ -5,7 +5,7 @@
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="frontend/style.css">
+    <link rel="stylesheet" href="frontend/style-min.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body>
@@ -26,7 +26,7 @@
         fetch('http://localhost/RockPaperScissors/backend/result.php?choice=' + playerChoice, {})
             .then(response => response.json())
             .then(response => {
-                console.log(response);
+                //console.log(response);
                 switch (response) {
                     case 'player':
                         document.getElementById('winner').innerHTML = 'You won!';
